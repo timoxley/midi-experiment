@@ -1,0 +1,132 @@
+/**
+ * Fonts
+ */
+
+/*@import url(//fonts.googleapis.com/css?family=Source+Sans+Pro:200,300,400,600,700,400italic|Source+Code+Pro);*/
+
+/**
+ * Initial color definitions.
+ */
+
+html, body {
+  color: var(--color-beta);
+  background-color: var(--color-alpha);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/*
+apply a natural box layout model to all elements, but allowing components to change
+http://www.paulirish.com/2012/box-sizing-border-box-ftw/
+*/
+
+html {
+  box-sizing: border-box;
+}
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+
+/**
+ * Layout
+ */
+
+html,
+body {
+  /*overflow: hidden;*/
+  width: 100%; height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+/**
+ * Clearfix
+ */
+.cf:before, .cf:after { content: " "; display: table; }
+.cf:after { clear: both; }
+
+/**
+ * Typography.
+ */
+
+body {
+  font-weight: 400;
+  font-family: var(--font-body);
+  line-height: 1.6;
+  font-size: var(--font-standard);
+}
+
+h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
+  font-weight: 700;
+  margin: 0;
+  margin-top: 0.8rem;
+  margin-bottom: 0.8rem;
+  line-height: 1;
+}
+
+a {
+  color: var(--color-zeta);
+  text-decoration: none;
+  transition-property: color;
+  transition-duration: 150ms;
+  cursor: pointer;
+}
+
+a:hover {
+  color: color(var(--color-zeta) shade(10%));
+  text-decoration: underline;
+}
+
+h1, .h1 {
+  font-size: var(--font-extra-large);
+}
+
+h2, .h2{
+  font-size: var(--font-large);
+}
+
+h3, .h3 {
+  font-size: var(--font-medium);
+}
+
+h4, .h4 {
+  font-size: var(--font-standard);
+}
+
+h5, .h5 {
+  text-transform: uppercase;
+  font-size: var(--font-small);
+  margin-top: 0.2rem;
+  margin-bottom: 0.2rem;
+}
+
+button,
+.button {
+  padding: 0.4rem 0.6rem;
+  border: 2px solid currentColor;
+  border-radius: 3px;
+  color: var(--color-beta);
+  font-weight: 800;
+  cursor: pointer;
+  font-family: var(--font-head);
+  font-size: var(--font-standard);
+  line-height: var(--font-standard);
+  outline: none;
+  transition-property: border-color, background-color;
+  transition-duration: 100ms;
+  display: inline-block;
+}
+
+button:not([disabled]):hover,
+.button:not(.disabled):hover {
+  background: color(var(--color-beta) tint(15%));
+}
+
+a.button:hover {
+  text-decoration: none;
+}
+
+.button {
+  text-decoration: none;
+}

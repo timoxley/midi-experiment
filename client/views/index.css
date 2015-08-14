@@ -1,0 +1,90 @@
+.container {
+  display: flex;
+  height: 100vh;
+  width: 100vw;
+  align-items: center;
+  justify-content: center;
+}
+
+.container > * {
+  flex: 1;
+}
+
+main {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  max-width: 50%;
+}
+
+main > * {
+  flex: 1;
+  min-width: 100%;
+  margin-bottom: 5vh;
+}
+
+.knobs, .buttons, .sliders {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.knobs {
+  width: 100%;
+}
+
+.Knob {
+  width: 30px;
+}
+
+.Knob > .knob {
+  width: 100%;
+  height: 30px;
+}
+
+.Knob svg .background {
+  fill: var(--color-eta);
+}
+
+.Knob svg .indicator {
+  fill: var(--color-beta);
+}
+
+.Knob .currentValue,
+.Slider .currentValue {
+  text-align: center;
+  width: 100%;
+  color: var(--color-beta);
+}
+
+
+.Slider > svg {
+  width: 30px;
+  perspective: 9999;
+}
+
+.Slider .background {
+  fill: var(--color-eta);
+}
+
+.Slider .indicator {
+  fill: var(--color-beta);
+}
+
+.Button {
+  width: 30px;
+  height: 30px;
+}
+
+.Button .background {
+  transition: all 0.1s;
+}
+
+.Button.on .background {
+  fill: var(--color-delta);
+}
+
+.Button.off .background {
+  fill: var(--color-eta);
+}
